@@ -1,0 +1,14 @@
+services:
+  app-shell:
+    build:
+      context: ./app-shell
+    ports:
+      - '3000:3000'
+    depends_on:
+      - clients
+
+  clients:
+    build:
+      context: ./clients
+    ports:
+      - '3001:3001'
